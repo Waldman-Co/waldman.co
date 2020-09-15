@@ -1,0 +1,79 @@
+.index-content .header {
+    background: #101a26;
+    max-width: 100%;
+  }
+  
+  .header {
+    background: #101a26;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+  }
+  
+  .header .title {
+    font-size: 85px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: -7px;
+    margin-top: 4px;
+    letter-spacing: 3px;
+  }
+  
+  .header .sub-title {
+    font-size: 29px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 16px;
+    letter-spacing: 3px;
+    color: white;
+  }
+  
+  .section {
+    width: 100%;
+    height: 100%;
+  }
+  .astronaut-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("/static/images/backgrounds/astronaut-over-earth.jpg");
+  }
+  
+  .section .section__text {
+    background: rgba(255, 255, 255, 0.87);
+    position: absolute;
+    padding: 10px 30px 20px;
+    right: 0;
+    top: 100%;
+    margin-right: 300px;
+    width: 320px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  @media screen and (max-width: 500px) {
+    .header .title {
+      font-size: 1.3rem;
+    }
+    .header .sub-title {
+      font-size: 17px;
+    }
+    .astronaut-img {
+      background-position: top;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .section {
+      display:grid;
+  
+    }
+    .section .section__text  {
+      position: relative;
+      top:calc(100% + 120px);
+      width:100vw;
+    }
+  }
+  
