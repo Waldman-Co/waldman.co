@@ -1,7 +1,10 @@
 <div class="navbar">
-    <ul class="navbar-list">
-        <% for(navItem of ['Home','Service','Clients','Team','Contact']) {%>
-            <li class="navbar-item"><a class="navbar-link" href="#<%= navItem %>"><%= navItem %></a></li>
-        <%}%> 
+    <ul class="navbar-list desktop">
+        <li class="navbar-item" onclick="onHomeClick()"><a class="navbar-link active home-btn" >Home</a></li>
+        <li class="navbar-item desktop-item" onclick="onNavItemClick('.services-btn')"><a class="navbar-link services-btn" href="#services">Services</a></li>
+        <li class="navbar-item desktop-item" onclick="onNavItemClick('.clients-btn')"><a class="navbar-link clients-btn" href="#clients">Clients</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="#team">Team</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="/contact">Contact</a></li>
     </ul>
+
 </div>
