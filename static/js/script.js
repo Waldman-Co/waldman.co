@@ -1,6 +1,15 @@
 const unActiveNavItems = () => 
         document.querySelectorAll('.navbar-link').forEach(el => el.classList.remove('active'));
 
+const onNavItemClick = (target,external = false) =>{
+    if(window.location.pathname !== '/' && !external){
+        window.location.href = `/` + target
+    }else {
+        document.querySelector(target).scrollIntoView({behavior:'smooth',block:'start'})
+    }
+}
+        
+
 const onHomeClick = (e) => {
     if(window.location.pathname === '/'){
         unActiveNavItems()
@@ -17,23 +26,40 @@ const onHomeClick = (e) => {
     document.querySelector('.home-btn').classList.add('active')
 }
 
-const onNavItemClick = (item,target) => {
-    unActiveNavItems()
-    document.querySelector(item).classList.add('active')
-    document.querySelector(target).scrollIntoView({behavior:'smooth',block:'start'})
-}
+
+
 
 const onLoadPageNavItemHandler = () => {
     switch(window.location.pathname){
         case '/contact/':
-            onNavItemClick('.contact-btn');
+            unActiveNavItems()
+            document.querySelector('.contact-btn').classList.add('active')
+            onNavItemClick('.contact-btn',true);
             break;
         case '/team/':
-            onNavItemClick('.contact-btn');
+            onNavItemClick('.contact-btn',true);
             break;
         default:
             onHomeClick();
             break; 
     }
 }
+
+const spyScrolling = () => {
+    const sections = document.querySelectorAll('.section-anchor')
+    window.onscroll = () => {
+        const scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
+        for (let s in sections) {
+            if(sections.hasOwnProperty(s) && sections[s].offsetTop <= scrollPos) {
+                const id = sections[s].id
+                document.querySelector('.active').classList.remove('active')
+                document.querySelector(`.${id}-btn`).classList.add('active')
+            }
+        }
+    }
+}
+
 onLoadPageNavItemHandler()
+
+if(window.location.pathname === '/') spyScrolling()
+    
