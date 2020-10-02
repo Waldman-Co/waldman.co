@@ -8,15 +8,17 @@
         <div class="sub-title"><%= subTitle %></div>
     </div>
     <section id="home" class="section section-anchor">
-        <img class="section-img-hero" 
+        <div class="image-div">
+            <img class="section-img-hero" 
             src="static/images/backgrounds/astronaut-over-earth-crop.jpg " 
             srcset="static/images/backgrounds/astronaut-over-earth.jpg 1600w,
-                    static/images/backgrounds/astronaut-over-earth.jpg 1000w,
-                    static/images/backgrounds/astronaut-over-earth-crop.jpg 999w
-                    static/images/backgrounds/astronaut-over-earth-crop.jpg 500w"
-            sizes="100vw"  
-        >
-        </img>
+                        static/images/backgrounds/astronaut-over-earth.jpg 1000w,
+                        static/images/backgrounds/astronaut-over-earth-crop.jpg 999w
+                        static/images/backgrounds/astronaut-over-earth-crop.jpg 500w"
+                sizes="100vw"  
+                >
+            </img>
+        </div>
         <div class="section__text">
             <%- firstBox -%>
         </div>
@@ -26,6 +28,14 @@
             <h1 class="title"><%= servicesTitle %></h1>
             <div class="sub-title"><%= servicesSubtitle %></div>
         </header>
+        <div class="services-icons">
+            <% for(icon of servicesCollection){ %>
+                <div class="service-icon">
+                    <div><img class="icon" src="<%=icon[0]%>" alt="<%=icon[1]%>"></div>
+                    <span class="icon-title"><%=icon[1]%></span>
+                </div>
+            <%}%> 
+        </div>
     </section>
     <%= content %>
     <%- include("/partials/_footer.ejs")-%> 

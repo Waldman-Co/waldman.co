@@ -36,10 +36,11 @@
   height: 100%;
   display: grid;
   grid-gap: 165px;
+  position: relative;
+
 }
 
-.section-header {
-}
+
 
 .section-header .title {
   text-transform: uppercase;
@@ -51,10 +52,11 @@
   margin: 100px 20px 50px;
 }
 
-.section-header .sub-title {
+.section .image-div {
+  width:100vw;
+  height:100%;
 }
-
-.section-img-hero {
+.section .section-img-hero {
   position: relative;
   width: 100%;
 }
@@ -63,20 +65,71 @@
   background: rgba(255, 255, 255, 0.87);
   position: absolute;
   padding: 10px 30px 20px;
-  right: 0;
-  top: 100%;
-  margin-right: 300px;
-  width: 400px;
+  right: 250px;
+  top: 60%;
+  width: 360px;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   font-size: 20px;
 }
-.section .section__text .h1 {
-  font-size: 30px;
+.section .section__text .section-header {
+  font-size: 28px;
 }
 .section.section-services {
   text-align: center;
   height: 100vh;
+}
+.section .sub-title {
+  padding: 0 30px;
+  background: none;
+  color: white;
+  text-align: center;
+  margin-bottom: 70px;
+  font-size: 30px;
+  font-weight: 300;
+}
+.section .services-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -150px;
+}
+.section .services-icons .service-icon {
+  display: grid;
+  width: 350px;
+  height: 300px;
+  margin-top: 20px;
+  transition: 0.2s;
+}
+
+.section .services-icons .service-icon:hover{
+  -webkit-filter: drop-shadow(0 0 40px white);
+  filter: drop-shadow(0 20 30px white);
+  transform: translateY(-15px);
+}
+
+.section .services-icons .service-icon .icon {
+  display: inline-block;
+  height: 120px;
+  width: auto;
+  transition: 0.2s;
+}
+
+
+.section .services-icons .service-icon .icon-title {
+  color: white;
+  margin-top: 5px;
+  font-size: 28px;
+  margin-bottom: 15px;
+  font-weight: 900;
+  max-width: 250px;
+  position: relative;
+  left:50%;
+  transform: translateX(-50%);
 }
 
 @media screen and (max-width: 500px) {
@@ -89,13 +142,19 @@
   .section-img-hero {
     display: block;
     position: relative;
-    left: 35%;
+    left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    width: 100vw;
   }
   .section .section__text {
     position: unset;
     display: block;
     width: 100vw;
+    font-size: 15px;
+    margin-top: -55px;
+  }
+  .section .section__text .h2 {
+    font-size: 30px;
   }
 }

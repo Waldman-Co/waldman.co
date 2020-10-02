@@ -8,9 +8,13 @@ body {
   font-family: Lato, sans-serif;
   color: #141414;
   background-color: #20344c;
-  background-image: linear-gradient(180deg, #20344c 0%, #101a26 80%);
+  background-image: linear-gradient(180deg, #1c2f46 0%, #0c141d 90%);
   background-attachment: fixed;
   scroll-behavior: smooth;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 a {
