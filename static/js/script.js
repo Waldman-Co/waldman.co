@@ -52,8 +52,10 @@ const spyScrolling = () => {
         for (let s in sections) {
             if(sections.hasOwnProperty(s) && sections[s].offsetTop <= scrollPos) {
                 const id = sections[s].id
-                document.querySelector('.active').classList.remove('active')
-                document.querySelector(`.${id}-btn`).classList.add('active')
+                if (document.querySelector('.active') && document.querySelector(`.${id}-btn`)) {
+                    document.querySelector('.active').classList.remove('active')
+                    document.querySelector(`.${id}-btn`).classList.add('active')
+                }
             }
         }
     }

@@ -3,6 +3,7 @@
     <%- include("/partials/_head.ejs") -%>
 <body>
     <%- include("partials/_nav.ejs") -%>
+    <div class="fixed-background"></div>
     <div class="index-content header">
         <h1 class="title"><%= title %></h1>
         <div class="sub-title"><%= subTitle %></div>
@@ -10,11 +11,8 @@
     <section id="home" class="section section-anchor">
         <div class="image-div">
             <img class="section-img-hero" 
-            src="static/images/backgrounds/astronaut-over-earth-crop.jpg " 
-            srcset="static/images/backgrounds/astronaut-over-earth.jpg 1600w,
-                        static/images/backgrounds/astronaut-over-earth.jpg 1000w,
-                        static/images/backgrounds/astronaut-over-earth-crop.jpg 999w
-                        static/images/backgrounds/astronaut-over-earth-crop.jpg 500w"
+            src="<%= firstHero %>" 
+            srcset="<%= firstHeroSet.map(s => `${s[0]} ${s[1]}`).join(', ') %>"
                 sizes="100vw"  
                 >
             </img>
@@ -37,8 +35,41 @@
             <%}%> 
         </div>
     </section>
+    <section id="clients" class="section section-clients section-anchor">
+        <header class="section-header">
+            <h1 class="title"><%= clientsTitle %></h1>
+            <% if(clientsSubtitle) { %>
+                <div class="sub-title"><%= clientsSubtitle %></div>
+            <% } %>
+        </header>
+        <div class="client-logos">
+            <% for (client of clientsCollection) { %>
+                <div>
+                    <a href="<%= client[1] %>"><img class="<%= client[2] %>"src="<%= client[0] %>"></a>
+                </div>
+            <% } %>
+        </div>
+    </section>
+    <section class="section second-hero">
+        <div class="image-div">
+            <img class="section-img-hero" 
+                src="<%= secondHero %>" 
+                sizes="100%" 
+                >
+            </img>
+        </div>
+        <div class="section__text">
+            <%- secondBox -%>
+        </div>
+    </section>
+    <section class="section footer-section">
+        <div style="text-align: center;">
+            <p class="text"><%= text %></p>
+            <a class="button" href="/contact"><%= buttonText %></a>
+        </div>
+    </section>
+    <%- include("/partials/_footer.ejs") %> 
     <%= content %>
-    <%- include("/partials/_footer.ejs")-%> 
 </body>
 </html>
 

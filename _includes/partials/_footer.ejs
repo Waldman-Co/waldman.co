@@ -1,2 +1,6 @@
-<div class="footer"></div>
+<div class="footer">
+    <% if(link && subText) { %>
+        <p><a class="site-link" target="_blank" href="<%= link %>"><%= subText %></a></p>
+    <% } %>
+</div>
 <script src="/static/js/script.js"></script>
