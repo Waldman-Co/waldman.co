@@ -247,7 +247,7 @@
   .header .sub-title {
     font-size: 17px;
   }
-  .section{
+  .section.top-section{
     margin-top:160px;
   }
   .section-img-hero {
@@ -263,18 +263,66 @@
     display: block;
     width:100%;
     max-width: 100vw;
-    font-size: 15px;
-    top: 10px;
-    font-size: 18px;
+    top: 0px;
   }
   .section .section__text .section-header {
     font-size: 30px;
   }
+  .section .section__text .section-text {
+    font-size: 17px
+  }
 
+  .section.section-services {
+    margin-top: -200px;
+  }
+ .section-header .title {
+    font-size:40px;
+  }
   .section .services-icons .service-icon {
     width:80px;
   }
   .section .services-icons .service-icon .icon {
     height:70px;
   }
+  .section .services-icons .service-icon div {
+    height:70px;
+  }
+  .section .services-icons .service-icon .icon-title {
+    font-size:18px;
+  }
+  .section .client-logos {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .section .client-logos a {
+    width: 200px;
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+  }
+  .section .section__text.second-box {
+    margin-top: 43px;
+  }
+  .section .section__text.second-box .section-header{
+    font-size: 20px;
+  }
+  .section .section__text.second-box .section-text {
+    font-size:15px;
+  }
+  .second-hero {
+    margin-top:160px;
+  }
+
+  .section .client-logos a:hover::after {
+    border-bottom:unset;
+    opacity: unset;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  .section .services-icons .service-icon:hover{
+    -webkit-filter: unset;
+    filter: unset;
+    transform: unset;
+  }
+
 }
