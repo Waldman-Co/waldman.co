@@ -313,6 +313,10 @@
     margin-top:160px;
   }
 
+  .section.footer-section {
+    margin-top: -100px;
+  }
+
   .section .client-logos a:hover::after {
     border-bottom:unset;
     opacity: unset;
