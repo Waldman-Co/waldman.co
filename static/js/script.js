@@ -61,6 +61,7 @@ const spyScrolling = () => {
     }
 }
 
+
 onLoadPageNavItemHandler()
 
 if(window.location.pathname === '/') spyScrolling()

@@ -1,0 +1,41 @@
+.contact-section {
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+    text-align: center;
+    max-width: 600px;
+    color: #d7e0ea;
+}
+
+
+.contact-button {
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:15px;
+    width: 310px;
+    height: 80px;
+    padding: 18px 25px;
+}
+.contact-button .icon {
+    position: relative;
+    top:50%;
+    transform: translateY(-60%);
+    max-width: 50px;
+    filter:invert(0.9);
+    transition: 0.1s;
+}
+
+.contact-button span {
+    position: relative;
+    top:50%;
+    left:-15%;
+    transform: translateY(-30%);
+}
+
+.contact-button:hover .icon{
+    filter: invert(0);
+}

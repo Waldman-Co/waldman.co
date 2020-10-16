@@ -8,8 +8,10 @@ backend:
 # Uncomment below to enable drafts
 # publish_mode: editorial_workflow
 
-media_folder: "_site/static/images/uploads" # Media files will be stored in the repo under images/uploads
-public_folder: "static/images/uploads"
+media_folder: "_site/static/images/backgrounds" # Media files will be stored in the repo under images/uploads
+public_folder: "static/images"
+
+
 collections:
   - label: "Pages"
     name: "pages" # Used in routes, e.g., /admin/collections/blog
@@ -21,7 +23,7 @@ collections:
           #First Section
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Sub Title", name: "subTitle", widget: "string" }
-          - { label: "First Hero Image", name: "firstHero", widget: "string" }
+          - { label: "First Hero Image", name: "firstHero", widget: "image" }
           - { label: "First Hero Image Set", name: "firstHeroSet", widget: "list"}
           - { label: "First Text Box", name: "firstBox", widget: "markdown"}
           #Second Section
@@ -31,9 +33,9 @@ collections:
           #Third Section
           - { label: "Clients Title", name: "clientsTitle", widget: "string" }
           - { label: "Clients Sub Title", name: "clientsSubtitle", widget: "string" }
-          - { label: "Clients Icons Collection", name: "clientsCollection", widget: "list"}
+          - { label: "Clients Icons Collection", name: "clientsCollection", widget: "list" }
           #Fourth Section
-          - { label: "Second Hero Image", name: "secondHero", widget: "string" }
+          - { label: "Second Hero Image", name: "secondHero", widget: "image" }
           - { label: "Second Hero Image Set", name: "secondHeroSet", widget: "list"}
           - { label: "Second Text Box", name: "secondBox", widget: "markdown"}
           #Fifth Section
@@ -41,7 +43,23 @@ collections:
           - { label: "Button Text", name: "buttonText", widget: "string"}
           - { label: "Sub Text", name: "subText", widget: "string"}
           - { label: "Link", name: "link", widget: "string"}
-
+      - label: "Contact"
+        name: 'contact-page'
+        file: "/contact.md"
+        fields: # The fields for each document, usually in front matter
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Sub Title", name: "subTitle", widget: "string" }
+          - { label: "Get in touch message", name: "getInTouchMessage", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Address", name: "address", widget: "string" }
+          - { label: "Suite", name: "suite", widget: "string" }
+          - { label: "City", name: "city", widget: "string" }
+          - { label: "Province", name: "province", widget: "string" }
+          - { label: "Country", name: "country", widget: "string" }
+          - { label: "Postal", name: "postal", widget: "string" }
+          - { label: "Sub Text", name: "subText", widget: "string" }
+          - { label: "Link", name: "link", widget: "string" }
 
 
 

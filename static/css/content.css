@@ -4,12 +4,14 @@
 }
 
 .header {
-  background: #101a26;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 50px;
   text-align: center;
   color: white;
+}
+.header.background{
+  background: #101a26;
 }
 
 .header .title {
