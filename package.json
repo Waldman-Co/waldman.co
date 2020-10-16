@@ -6,7 +6,8 @@
   "scripts": {
     "build": "npx eleventy",
     "serve": "npx eleventy --serve",
-    "debug": "DEBUG=* npx eleventy"
+    "debug": "DEBUG=* npx eleventy",
+    "cms-local": "npx netlify-cms-proxy-server"
   },
   "keywords": [],
   "author": "",
