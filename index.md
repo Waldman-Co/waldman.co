@@ -1,6 +1,6 @@
 ---
 firstHero: static/images/backgrounds/astronaut-over-earth-crop.jpg
-clientsSubtitle: client all over the globe
+clientsSubtitle: ""
 clientsCollection:
   - - /static/images/clients/parlamericas.png
     - http://parlamericas.org
@@ -15,7 +15,7 @@ clientsCollection:
   - - /static/images/clients/mindbliss.png
     - http://mindbliss.com
 layout: index.ejs
-title: Waldman
+title: Waldman&CO
 subTitle: Web, Mobile & Interactive
 firstHeroSet:
   - - static/images/backgrounds/astronaut-over-earth.jpg
