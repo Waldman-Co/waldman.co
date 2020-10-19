@@ -257,7 +257,7 @@
     display: block;
     position: relative;
     left: 50%;
-    top: -50px;
+    top: 50%;
     transform: translate(-50%, -50%);
     width: 100vw;
   }
@@ -303,9 +303,9 @@
     left:50%;
     transform: translateX(-50%);
   }
-  .section .section__text.second-box {
+  /* .section .section__text.second-box {
     margin-top: 43px;
-  }
+  } */
   .section .section__text.second-box .section-header{
     font-size: 20px;
   }
