@@ -6,7 +6,7 @@ backend:
 
 
 # Uncomment below to enable drafts
-# publish_mode: editorial_workflow
+publish_mode: editorial_workflow
 
 media_folder: "_site/static/images/backgrounds" # Media files will be stored in the repo under images/uploads
 public_folder: "static/images"
@@ -29,14 +29,14 @@ collections:
             }
           - { label: "First Text Box", name: "firstBox", widget: "markdown"}
           #Second Section
-          - { label: "Services Title", name: "servicesTitle", widget: "string" }
-          - { label: "Services Sub Title", name: "servicesSubtitle", widget: "string" }
+          - { label: "Services Title", name: "servicesTitle", widget: "string"}
+          - { label: "Services Sub Title", name: "servicesSubtitle", widget: "string",required: false}
           - { label: "Services Icons Collection", name: "servicesCollection", widget: "list",
               field: {label: 'Service Icon set',name: serviceIconSet, widget: list}
             }
           #Third Section
           - { label: "Clients Title", name: "clientsTitle", widget: "string" }
-          - { label: "Clients Sub Title", name: "clientsSubtitle", widget: "string" }
+          - { label: "Clients Sub Title", name: "clientsSubtitle", widget: "string", required: false}
           - { label: "Clients Icons Collection", name: "clientsCollection", widget: "list",
               field: {label: 'Clients-set', name: clientSet, widget: list}
             }
