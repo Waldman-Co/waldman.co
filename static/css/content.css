@@ -303,9 +303,9 @@
     left:50%;
     transform: translateX(-50%);
   }
-  /* .section .section__text.second-box {
-    margin-top: 43px;
-  } */
+  .section .section__text.second-box {
+    margin-top: 36px;
+  }
   .section .section__text.second-box .section-header{
     font-size: 20px;
   }
