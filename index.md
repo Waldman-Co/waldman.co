@@ -15,7 +15,7 @@ clientsCollection:
   - - /static/images/clients/mindbliss.png
     - http://mindbliss.com
 layout: index.ejs
-title: Waldman&CO
+title: Waldman & CO.
 subTitle: Web, Mobile & Interactive
 firstHeroSet:
   - - static/images/backgrounds/astronaut-over-earth.jpg
@@ -26,7 +26,7 @@ firstHeroSet:
     - 999w
   - - static/images/backgrounds/astronaut-over-earth-crop.jpg
     - 500w
-firstBox: >-
+firstBox:
   <h2 class="section-header">Unleash your potential</h2>
 
   <p class="section-text"><strong>Eric Waldman</strong> designs, builds and implements the digital strategies of businesses and not-for-profits in the Montréal and Ottawa regions.</p> <p class="section-text" >We combine proven technology with tasteful design to deliver spectacular results.</p>
