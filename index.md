@@ -15,7 +15,7 @@ clientsCollection:
   - - /static/images/clients/mindbliss.png
     - http://mindbliss.com
 layout: index.ejs
-title: Waldman&CO.
+title: Waldman
 subTitle: Web, Mobile & Interactive
 firstHeroSet:
   - - static/images/backgrounds/astronaut-over-earth.jpg
