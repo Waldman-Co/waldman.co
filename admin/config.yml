@@ -24,25 +24,34 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Sub Title", name: "subTitle", widget: "string" }
           - { label: "First Hero Image", name: "firstHero", widget: "image" }
-          - { label: "First Hero Image Set", name: "firstHeroSet", widget: "list"}
+          - { label: "First Hero Image Set", name: "firstHeroSet", widget: "list",
+              field: {label: 'First Hero image set', name: imageSet, widget: list}
+            }
           - { label: "First Text Box", name: "firstBox", widget: "markdown"}
           #Second Section
           - { label: "Services Title", name: "servicesTitle", widget: "string" }
           - { label: "Services Sub Title", name: "servicesSubtitle", widget: "string" }
-          - { label: "Services Icons Collection", name: "servicesCollection", widget: "list" }
+          - { label: "Services Icons Collection", name: "servicesCollection", widget: "list",
+              field: {label: 'Service Icon set',name: serviceIconSet, widget: list}
+            }
           #Third Section
           - { label: "Clients Title", name: "clientsTitle", widget: "string" }
           - { label: "Clients Sub Title", name: "clientsSubtitle", widget: "string" }
-          - { label: "Clients Icons Collection", name: "clientsCollection", widget: "list" }
+          - { label: "Clients Icons Collection", name: "clientsCollection", widget: "list",
+              field: {label: 'Clients-set', name: clientSet, widget: list}
+            }
           #Fourth Section
           - { label: "Second Hero Image", name: "secondHero", widget: "image" }
-          - { label: "Second Hero Image Set", name: "secondHeroSet", widget: "list"}
+          - { label: "Second Hero Image Set", name: "secondHeroSet", widget: "list",
+              field: {label: 'Second hero image set', name: imageSet, widget: list}
+            }
           - { label: "Second Text Box", name: "secondBox", widget: "markdown"}
           #Fifth Section
           - { label: "Text", name: "text", widget: "string"}
           - { label: "Button Text", name: "buttonText", widget: "string"}
           - { label: "Sub Text", name: "subText", widget: "string"}
           - { label: "Link", name: "link", widget: "string"}
+      # Contact Page
       - label: "Contact"
         name: 'contact-page'
         file: "/contact.md"
