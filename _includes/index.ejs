@@ -4,11 +4,11 @@
 <body>
     <%- include("partials/_nav.ejs") -%>
     <div class="fixed-background"></div>
-    <div class="index-content header">
+    <div class="index-content header background">
         <h1 class="title"><%= title %></h1>
         <div class="sub-title"><%= subTitle %></div>
     </div>
-    <section id="home" class="section section-anchor">
+    <section id="home" class="section top-section section-anchor">
         <div class="image-div">
             <img class="section-img-hero" 
             src="<%= firstHero %>" 
@@ -58,7 +58,7 @@
                 >
             </img>
         </div>
-        <div class="section__text">
+        <div class="section__text second-box">
             <%- secondBox -%>
         </div>
     </section>
@@ -68,97 +68,7 @@
             <a class="button" href="/contact"><%= buttonText %></a>
         </div>
     </section>
-    <%- include("/partials/_footer.ejs") %> 
     <%= content %>
+    <%- include("/partials/_footer.ejs") %> 
 </body>
 </html>
-
-<!--
-
-<!-- {{ include 'partials/badges.html' }}
-{{ include 'partials/clients.html' }}
-{{ include 'partials/button.html' }}
-
-{{extend 'pjax.html' if request.pjax else 'layout.html'}}
-
-<section class="section section--full-bleed">
-    <div class="section__image">
-        <img src="{{=THUMB('static/images/backgrounds/astronaut-over-earth-crop.jpg', size='500x500')}}"
-             srcset="{{=THUMB('static/images/backgrounds/astronaut-over-earth.jpg', size='1600x1600')}} 1600w,
-                     {{=THUMB('static/images/backgrounds/astronaut-over-earth.jpg', size='1000x1000')}} 1000w,
-                     {{=THUMB('static/images/backgrounds/astronaut-over-earth-crop.jpg', size='1000x1000')}} 999w,
-                     {{=THUMB('static/images/backgrounds/astronaut-over-earth-crop.jpg', size='500x500')}} 500w"
-             sizes="100vw"
-             alt="An astronaut over earth"
-             style="background-image: url({{=THUMB('static/images/backgrounds/astronaut-over-earth.jpg', size='100x100')}})"
-         />
-    </div>
-    <div class="section__text">
-        <h2>Unleash your potential</h2>
-        <p><strong>Eric Waldman</strong> designs, builds and implements the digital strategies of businesses and not-for-profits in the Montréal and Ottawa regions.</p>
-        <p>We combine proven technology with tasteful design to deliver spectacular results.</p>
-    </div>
-</section>
-
-<section class="section section--badges">
-    <div class="section__anchor" id="services"></div>
-    <h2 class="section__title">Our Services</h2>
-    <p class="section__text">We handle all aspects of your digital&nbsp;strategy.</p>
-    {{services = [
-        ("Websites"                               , None, URL('static', 'images/icons/publish.png')),
-        ("Web Portals"                            , None, URL('static', 'images/icons/world-network.png')),
-        ("Content Management Systems"             , None, URL('static', 'images/icons/cms.png')),
-        ("Interactive Design"                     , None, URL('static', 'images/icons/touch.png')),
-        ("E-Commerce"                             , None, URL('static', 'images/icons/shop.png')),
-        ("Digital Publishing"                     , None, URL('static', 'images/icons/website.png')),
-        ("iOS & Android Applications"             , None, URL('static', 'images/icons/smartphone.png')),
-        ("Search Engine Optimization"             , None, URL('static', 'images/icons/search.png')),
-        ("Online Marketing"                       , None, URL('static', 'images/icons/ribbon.png')),
-        ("Open-Source Consulting"                 , None, URL('static', 'images/icons/open-source.png')),
-    ]}}
-    {{badges(services)}}
-</section>
-
-<section class="section section--badges">
-    <div class="section__anchor" id="clients"></div>
-    <h2 class="section__title">Featured Clients</h2>
-    {{clients_items = [
-        ("ParlAmericas"        , URL('static', 'images/clients/parlamericas.png' ), "http://parlamericas.org"   ,),
-        ("Learning Bird"       , URL('static', 'images/clients/learningbird.png' ), "http://learningbird.com"   ,),
-        ("Victoria Properties" , URL('static', 'images/clients/victoria.png'     ), "http://locationvictoria.ca",),
-        ("Colby Monet"         , URL('static', 'images/clients/colbymonet.png'   ), "http://colby-monet.com"    ,),
-        ("Mindbliss"           , URL('static', 'images/clients/mindbliss.png'    ), "http://mindbliss.com"      , False, True),
-    ]}}
-    {{clients(clients_items)}}
-</section>
-
-<section class="section section--full-bleed">
-    <div class="section__image">
-        {{=RIMG('static/images/backgrounds/spaceshuttle-short.jpg',
-                srcset=[1200,921,920,500],
-                _sizes="100vw",
-                _alt="Space shuttle launching."
-        )}}
-    </div>
-    <div class="section__text">
-        <h2>Important ideas deserve perfect execution</h2>
-        <p>
-            Where does perfection come from? At Eric&nbsp;Waldman it's through pairing technical excellence with our passion for state-of-the-art design.
-        </p>
-        <p>
-            When technology will make or break your next project, let yourself focus on the bigger picture by bringing in Eric&nbsp;Waldman to sweat out the technical details.
-        </p>
-    </div>
-</section>
-
-<section class="section section--contact">
-    <p>Work with Eric&nbsp;Waldman on your&nbsp;next&nbsp;project</p>
-    {{button('Contact Eric Waldman',
-            URL('contact'),
-            icon='arrow',
-            style='vbig',
-            animate=True)}}
-</section> -->
-
-
--->
