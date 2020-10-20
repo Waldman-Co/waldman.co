@@ -1,4 +1,4 @@
-# Uncomment local_backend and run `npm run cms_local` for local use of the cms
+# Uncomment local_backend and run `npm run cms-local` for local use of the cms
 # local_backend: true 
 backend:
   name: git-gateway

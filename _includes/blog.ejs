@@ -2,7 +2,6 @@
 <html lang="en">
     <%- include("/partials/_head.ejs") -%>
 <body>
-    <%- include("partials/_helpers.ejs") %>
     <%- include("partials/_nav.ejs") -%>
     <div class="fixed-background"></div>
     <div class="index-content header transparent">
@@ -12,7 +11,7 @@
     <section class="excerpts">
         <% for (const post of collections.post) { %>
             <article>
-                <span><%= this.formatDate(post.date) %></span>
+                <span><%= post.date %></span>
                 <%- post.templateContent %>
             </article>
         <% } %> 
