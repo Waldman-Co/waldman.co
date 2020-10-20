@@ -3,10 +3,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('admin');
     const ejs = require('ejs');
     eleventyConfig.setLibrary('ejs',ejs);
-    // eleventyConfig.addJavaScriptFunction('formatDate', (str) => {
-    //     const d = new Date(str)
-    //     return `${d.getMonth()} ${d.getDate()}, ${d.getFullYear()}}`
-    // })
     return {
         passthroughFileCopy: true,
         dataTemplateEngine: "ejs",
