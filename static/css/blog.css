@@ -1,5 +1,18 @@
 .excerpts {
+    width: 850px;
     max-width: 850px;
     color: #d7e0ea;
     margin: 0px auto 0px;
+    padding: 1px 30px;
+}
+
+.post-date {
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.post p {
+    font-size: 24px;
+    margin: 0 0 21px;
+    line-height: 1.6;   
 }

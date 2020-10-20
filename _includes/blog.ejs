@@ -11,8 +11,8 @@
     </div>
     <section class="excerpts">
         <% for (const post of collections.post) { %>
-            <article>
-                <span><%= formatDate(post.date) %></span>
+            <article class="post">
+                <span class="post-date"><%= formatDate(post.date) %></span>
                 <%- post.templateContent %>
             </article>
         <% } %> 
