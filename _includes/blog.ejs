@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("/partials/_head.ejs") -%>
+<body>
+    <%- include("partials/_helpers.ejs") %>
+    <%- include("partials/_nav.ejs") -%>
+    <div class="fixed-background"></div>
+    <div class="index-content header transparent">
+        <h1 class="title"><%= title %></h1>
+        <div class="sub-title"><%= subTitle %></div>
+    </div>
+    <section class="excerpts">
+        <% for (const post of collections.post) { %>
+            <article>
+                <span><%= this.formatDate(post.date) %></span>
+                <%- post.templateContent %>
+            </article>
+        <% } %> 
+    </section>
+    <%- include("/partials/_footer.ejs")-%> 
+</body>
+</html>

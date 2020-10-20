@@ -100,6 +100,4 @@ secondBox: <h2>Important ideas deserve perfect execution</h2>
 #Fifth Section
 text: Work with Waldman Web Consulting on your next project
 buttonText: » Contact Us
-subText: An Eric Waldman company
-link: https://ericwaldman.ca
 --- 

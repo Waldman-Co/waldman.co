@@ -3,6 +3,10 @@
   max-width: 100%;
 }
 
+.index-content.header.transparent {
+  background-color: transparent;
+}
+
 .header {
   background: #101a26;
   padding-top: 10px;

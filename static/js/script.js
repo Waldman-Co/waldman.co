@@ -9,7 +9,6 @@ const onNavItemClick = (target,external = false) =>{
     }
 }
         
-
 const onHomeClick = (e) => {
     if(window.location.pathname === '/'){
         unActiveNavItems()
@@ -26,22 +25,26 @@ const onHomeClick = (e) => {
     document.querySelector('.home-btn').classList.add('active')
 }
 
-
-
-
 const onLoadPageNavItemHandler = () => {
     switch(window.location.pathname){
         case '/contact/':
             unActiveNavItems()
             document.querySelector('.contact-btn').classList.add('active')
-            onNavItemClick('.contact-btn',true);
-            break;
+            onNavItemClick('.contact-btn',true)
+            break
+        case '/blog/':
+            unActiveNavItems()
+            document.querySelector('.blog-btn').classList.add('active')
+            onNavItemClick('.blog-btn',true)
+            break
         case '/team/':
-            onNavItemClick('.contact-btn',true);
-            break;
+            unActiveNavItems()
+            document.querySelector('.team-btn').classList.add('active')
+            onNavItemClick('.team-btn',true)
+            break
         default:
             onHomeClick();
-            break; 
+            break
     }
 }
 
