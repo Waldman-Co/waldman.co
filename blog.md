@@ -1,5 +1,6 @@
 --- 
 layout: blog.ejs
-title: waldman web consulting
+title: Waldman & Co.
 subTitle: web, mobile & interactive
+contactText: Contact Us
 ---

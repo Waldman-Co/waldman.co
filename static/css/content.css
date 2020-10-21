@@ -198,7 +198,7 @@
 }
 
 .footer-section {
-  margin-top: 120px;
+  margin-top: 0px;
 }
 
 .footer-section .text {
@@ -229,7 +229,7 @@
   width: 100%;
 }
 
-.site-link {
+.site-link, .blog a {
   font-size: 20px;
   font-weight: 700;
   border-bottom: 2px solid #ce2c9e;
@@ -237,13 +237,13 @@
   transition: 0.15;
 }
 
-.site-link:hover {
+.site-link:hover, .blog a:hover {
   background-color: #ce2c9e;
   border-radius: 2px;
 }
 
 .footer {
-  margin: 200px 0px 65px 0px;
+  margin: 100px 0px 65px 0px;
   text-align:center;
 }
 

@@ -1,4 +1,5 @@
-<% include('modules/_date.ejs') %> 
+<% include('modules/_date.ejs') %>
+<% include('modules/_excerpt.ejs') %>
 <!DOCTYPE html>
 <html lang="en">
     <%- include("/partials/_head.ejs") -%>
@@ -9,14 +10,18 @@
         <h1 class="title"><%= title %></h1>
         <div class="sub-title"><%= subTitle %></div>
     </div>
-    <section class="excerpts">
-        <% for (const post of collections.post) { %>
-            <article class="post">
-                <span class="post-date"><%= formatDate(post.date) %></span>
-                <%- post.templateContent %>
+    <section class="blog">
+        <% let i = 1 %> 
+        <% for (const post of collections.post.reverse()) { %>
+            <article id="<%= i++ %>" class="excerpt">
+                <span class="date"><%= formatDate(post.date) %></span>
+                <%- extractExcerpt(post) || post.templateContent %>
             </article>
         <% } %> 
     </section>
+    <div class="links">
+        <div><a class="button" href="/contact"><%= contactText %></a></div>
+    </div>
     <%- include("/partials/_footer.ejs")-%> 
 </body>
 </html>

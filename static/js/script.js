@@ -1,23 +1,23 @@
 const unActiveNavItems = () => 
         document.querySelectorAll('.navbar-link').forEach(el => el.classList.remove('active'));
 
-const onNavItemClick = (target,external = false) =>{
-    if(window.location.pathname !== '/' && !external){
+const onNavItemClick = (target, external = false) =>{
+    if (window.location.pathname !== '/' && !external) {
         window.location.href = `/` + target
-    }else {
+    } else {
         document.querySelector(target).scrollIntoView({behavior:'smooth',block:'start'})
     }
 }
         
 const onHomeClick = (e) => {
-    if(window.location.pathname === '/'){
+    if (window.location.pathname === '/') {
         unActiveNavItems()
         window.scrollTo({
             top: 0,
             left: 0,
             behavior: 'smooth'
           });
-    }else{
+    } else{
         const home = document.querySelector('.home-btn')
         home.href = '/'
         home.click()
@@ -26,18 +26,20 @@ const onHomeClick = (e) => {
 }
 
 const onLoadPageNavItemHandler = () => {
-    switch(window.location.pathname){
-        case '/contact/':
+    const p = window.location.pathname
+    switch(true) {
+        case /\/contact\//.test(p):
             unActiveNavItems()
             document.querySelector('.contact-btn').classList.add('active')
             onNavItemClick('.contact-btn',true)
             break
-        case '/blog/':
+        case /\/blog\//.test(p):
+        case /\/posts\/[0-9]+/.test(p):
             unActiveNavItems()
             document.querySelector('.blog-btn').classList.add('active')
             onNavItemClick('.blog-btn',true)
             break
-        case '/team/':
+        case /\/team\//.test(p):
             unActiveNavItems()
             document.querySelector('.team-btn').classList.add('active')
             onNavItemClick('.team-btn',true)
@@ -63,7 +65,6 @@ const spyScrolling = () => {
         }
     }
 }
-
 
 onLoadPageNavItemHandler()
 

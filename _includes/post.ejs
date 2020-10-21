@@ -1,1 +1,22 @@
-
+<% include('modules/_date.ejs') %> 
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("/partials/_head.ejs") -%>
+<body>
+    <%- include("partials/_nav.ejs") -%>
+    <div class="fixed-background"></div>
+    <div class="index-content header transparent">
+        <h1 class="title"><%= title %></h1>
+        <div class="sub-title"><%= subTitle %></div>
+    </div>
+    <article class="blog">
+        <h2 class="post-date"><%= formatDate(date) %></h2>
+        <%- content %>
+    </article>
+    <div class="links">
+        <div><a class="button" href="/blog#<%= page.fileSlug %>"><%= blogLinkText %></a></div>
+        <div><a class="button" href="/contact"><%= contactText %></a></div>
+    </div>
+    <%- include("/partials/_footer.ejs")-%> 
+</body>
+</html>
