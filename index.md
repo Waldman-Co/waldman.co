@@ -1,5 +1,14 @@
 ---
 firstHero: static/images/backgrounds/astronaut-over-earth-crop.jpg
+firstHeroSet:
+  - - static/images/backgrounds/astronaut-over-earth.jpg
+    - 1600w
+  - - static/images/backgrounds/astronaut-over-earth.jpg
+    - 1000w
+  - - static/images/backgrounds/astronaut-over-earth-crop.jpg
+    - 999w
+  - - static/images/backgrounds/astronaut-over-earth-crop.jpg
+    - 500w
 clientsSubtitle: ""
 clientsCollection:
   - - /static/images/clients/parlamericas.png
@@ -17,15 +26,6 @@ clientsCollection:
 layout: index.ejs
 title: Waldman & CO.
 subTitle: Web, Mobile & Interactive
-firstHeroSet:
-  - - static/images/backgrounds/astronaut-over-earth.jpg
-    - 1600w
-  - - static/images/backgrounds/astronaut-over-earth.jpg
-    - 1000w
-  - - static/images/backgrounds/astronaut-over-earth-crop.jpg
-    - 999w
-  - - static/images/backgrounds/astronaut-over-earth-crop.jpg
-    - 500w
 firstBox:
   <h2 class="section-header">Unleash your potential</h2>
 

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("/partials/_head.ejs") -%>
+<body>
+    <%- include("partials/_nav.ejs") -%>
+    <div class="fixed-background"></div>
+    <div class="index-content header">
+        <h1 class="title"><%= title %></h1>
+        <div class="sub-title"><%= subTitle %></div>
+    </div>
+    <div class="project-list">
+        <% for(const project in projects) { %>
+          <div class="project-card">
+            <p class="project-card-title"><%= project %></p>
+            <img src="<%= projects[project][0] %>" alt="<%= projects[project][1] %>">
+          </div>
+        <% } %>
+    </div>
+    <%= content %>
+    <%- include("/partials/_footer.ejs")-%> 
+</body>
+</html>

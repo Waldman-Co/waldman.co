@@ -44,6 +44,11 @@ const onLoadPageNavItemHandler = () => {
             document.querySelector('.team-btn').classList.add('active')
             onNavItemClick('.team-btn',true)
             break
+        case /\/projects\//.test(p):
+            unActiveNavItems()
+            document.querySelector('.projects-btn').classList.add('active')
+            onNavItemClick('.projects-btn',true)
+            break
         default:
             onHomeClick();
             break

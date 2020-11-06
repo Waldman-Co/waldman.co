@@ -1,5 +1,5 @@
 --- 
 layout: team.ejs
-title: waldman web consulting
+title: Waldman & CO.
 subTitle: web, mobil & interactive
 ---
