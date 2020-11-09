@@ -3,25 +3,17 @@ layout: projects.ejs
 title: Waldman & CO.
 subTitle: web, mobil & interactive
 projects: 
-  firstProject:
-    - https://www.imagescanada.ca/wp-content/uploads/2019/03/Spectacular-Photos-of-Niagara-Falls-Casinos.jpg
-    - this project was done some time ago with whoever. It was so great!
-  secondProject: 
-    - https://www.imagescanada.ca/wp-content/uploads/2019/03/Spectacular-Photos-of-Niagara-Falls-Casinos.jpg
-    - this was another project. boy we had a great time making this one too. whoowee!
-  thirdProject:
-    - https://www.imagescanada.ca/wp-content/uploads/2019/03/Spectacular-Photos-of-Niagara-Falls-Casinos.jpg
-    - blah blah blah project blah blah blah
-  fourthProject:
-    - https://www.imagescanada.ca/wp-content/uploads/2019/03/Spectacular-Photos-of-Niagara-Falls-Casinos.jpg
-    - blah blah blah project blah blah blah
-  fifthProject:
-    - https://www.imagescanada.ca/wp-content/uploads/2019/03/Spectacular-Photos-of-Niagara-Falls-Casinos.jpg
-    - blah blah blah project blah blah blah
-  sixthProject:
-    - https://www.imagescanada.ca/wp-content/uploads/2019/03/Spectacular-Photos-of-Niagara-Falls-Casinos.jpg
-    - blah blah blah project blah blah blah
-  seventhProject:
-    - https://www.imagescanada.ca/wp-content/uploads/2019/03/Spectacular-Photos-of-Niagara-Falls-Casinos.jpg
-    - blah blah blah project blah blah blah
+    - title: OCLaRE
+      description: Oclare is a web-based application that enhances the production of a lab report by offering tools for gathering information, planning, analyzing and writing collaborative lab reports. Teachers may customize a lab report by specifying the sections to be included in the report, the type of data to be entered, how the data may be analyzed, identifying the sections of the report that the students are to complete.
+      images: 
+        - https://www.profweb.ca/system/cms/files/files/000/004/414/original/oclare-students-views.jpg
+        - https://www.profweb.ca/system/cms/files/files/000/004/416/original/oclare-website.jpg
+    - title: Strong Project 
+      description: Full-service office furniture purchasing company, based out of LA. Online catalogue built with S3, PHP, and React. Optimized for google search and website performance score.
+      images:
+        - https://www.imagescanada.ca/wp-content/uploads/2019/03/Spectacular-Photos-of-Niagara-Falls-Casinos.jpg
+    - title: Other Project
+      description: Another project, built whenever, using whatever.
+      images: 
+        - https://www.imagescanada.ca/wp-content/uploads/2019/03/Spectacular-Photos-of-Niagara-Falls-Casinos.jpg
 ---
