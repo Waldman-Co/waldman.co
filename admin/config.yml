@@ -1,5 +1,5 @@
 # Uncomment local_backend and run `npm run cms-local` for local use of the cms
-# local_backend: true 
+local_backend: true 
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
@@ -21,8 +21,6 @@ collections:
         file: "/index.md"
         fields: # The fields for each document, usually in front matter
           #First Section
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Sub Title", name: "subTitle", widget: "string" }
           - { label: "First Hero Image", name: "firstHero", widget: "image" }
           - { label: "First Hero Image Set", name: "firstHeroSet", widget: "list",
               field: {label: 'First Hero image set', name: imageSet, widget: list}
@@ -56,8 +54,6 @@ collections:
         name: 'contact-page'
         file: "/contact.md"
         fields: # The fields for each document, usually in front matter
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Sub Title", name: "subTitle", widget: "string" }
           - { label: "Get in touch message", name: "getInTouchMessage", widget: "string" }
           - { label: "Email", name: "email", widget: "string" }
           - { label: "Phone", name: "phone", widget: "string" }

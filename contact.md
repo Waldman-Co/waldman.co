@@ -1,8 +1,6 @@
 ---
 getInTouchMessage: Get in touch with Eric Waldman
 layout: contact.ejs
-title: Waldman & Co. 
-subTitle: Web, Mobile & Interactive
 email: e@ericwaldman.ca
 phone: "+15148244403"
 phoneDisplay: "+1 (514) 824-4403"

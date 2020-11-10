@@ -24,8 +24,6 @@ clientsCollection:
   - - /static/images/clients/mindbliss.png
     - http://mindbliss.com
 layout: index.ejs
-title: Waldman & CO.
-subTitle: Web, Mobile & Interactive
 firstBox:
   <h2 class="section-header">Unleash your potential</h2>
 
