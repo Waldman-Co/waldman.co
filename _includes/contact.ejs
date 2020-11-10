@@ -4,10 +4,7 @@
     <body>
     <%- include("partials/_nav.ejs") -%>
     <div class="fixed-background"></div>
-    <div class="contact-content header">
-        <h1 class="title"><%= title %></h1>
-        <div class="sub-title"><%= subTitle %></div>
-    </div>
+    <%- include("partials/_title.ejs") -%>
     <section class="section contact-section">
         <h2 class="contact-message"><%= getInTouchMessage %></h2>
         <div class="contact-btn-set">
