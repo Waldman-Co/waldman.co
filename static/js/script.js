@@ -71,7 +71,24 @@ const spyScrolling = () => {
     }
 }
 
+const projectSpyScrolling = () => {
+    const projects = document.querySelectorAll('.project-anchor')
+    window.onscroll = () => {
+        const scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
+        for (let index in projects) {
+            const project = projects[index]
+
+            if(projects.hasOwnProperty(index) && project.offsetTop <= scrollPos + 305 && project.offsetTop + project.offsetHeight - 500 >= scrollPos) {
+                project.classList.add('active-card')
+            }
+            else if (projects.hasOwnProperty(index) && project.classList.contains('active-card')) {
+                project.classList.remove('active-card')
+            }
+        }
+    }
+}
+
 onLoadPageNavItemHandler()
 
 if(window.location.pathname === '/') spyScrolling()
-    
+if(window.location.pathname === '/projects/') projectSpyScrolling()    

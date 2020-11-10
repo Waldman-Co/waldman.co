@@ -7,7 +7,7 @@
     <%- include("partials/_title.ejs") -%>
     <div class="project-list">
         <% projects.forEach((project, index) => { %>
-          <div class="project-card">
+          <div id="<%= project.id %>" class="project-card project-anchor-<%= project.id %> project-anchor">
             <img src="<%= project.images[0] %>" alt="<%= project.title %>">
             <div class='project-description'>
               <h2 class="project-card-title"><%= project.title %></h2>
