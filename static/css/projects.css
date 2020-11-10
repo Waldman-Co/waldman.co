@@ -1,23 +1,21 @@
 .project-list {
-  position:relative;
-  left: 50%;
-  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 100vw;
 }
 .project-card {
-  display: block;
   position: relative;
   color: white;
-  width: 100%;
-  height: 800px;
   transition: 0.3s;
   text-align: center;
   margin: 5rem 0;
 }
 
 .project-card img {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  max-width: 1200px;
+  max-height: 100%;
 }
 
 .project-description {
