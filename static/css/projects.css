@@ -9,7 +9,6 @@
   position: relative;
   color: white;
   margin-top: 5rem;
-  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -17,23 +16,35 @@
   margin-top: 0px;
 }
 
-.project-card img {
+.project-card > [class*="-project-image"] {
   max-width: 95vw;
-  max-height: calc(100vh - 50px - 2rem - 80px);
+  max-height: calc(100vh - 50px - 6vw - 2rem);
   filter: grayscale(1);
   transition: 1.5s;
+}
+
+.project-card.active-card > [class*="-project-image"] {
+  filter: grayscale(0) !important;
 }
 
 .project-description-container {
   position: absolute;
   background-color: rgb(20,33,48, 0.7);
+  /* background-color: rgb(225,225,225,0.2); */
   right: 0;
-  bottom: 0;
+  bottom: calc(6vw + 2.25rem);
   width: 100%;
   padding: 0.5rem 1rem;
   text-align: left;
   font-size: 1rem;
   text-shadow: 0px 1px 3px rgb(0, 0, 0, 0.7);
+}
+
+.project-title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 .project-title {
@@ -44,27 +55,29 @@
 
 .project-link {
   margin: 0;
-  margin-left: 0.75rem;
-  font-weight: 100;
+  margin-right: 0.75rem;
+  font-size: 1.25em;
+  font-weight: 200;
 }
 
 .project-description {
   margin: 0.5rem 0;
-  text-align: justify;
   font-size: 1em;
 }
 
-.project-card.active-card img {
-  filter: grayscale(0) !important;
+.thumbnail-container {
+  margin: 1rem 0;
 }
 
 .image-thumbnail {
-  height: 8vw;
-  filter: grayscale(0.8);
+  filter: grayscale(1);
+  height: 6vw;
+  margin: 0 2px;
 }
 
 .active-thumbnail {
-  filter: grayscale(0)
+  filter: grayscale(0);
+  outline: 2px solid white;
 }
 
 .fade {
@@ -75,25 +88,30 @@
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .8}
+  from {opacity: 0.5}
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .8}
+  from {opacity: 0.5}
   to {opacity: 1}
 }
 
 @media (max-width: 500px) {
   .project-description-container {
     position: relative;
+    bottom: 0;
   }
 
-  .project-card img {
-    max-width: 100vw;
+  .project-card > [class*="-project-image"] {
+    max-width: 100vw !important;
   }
 
   .project-description-container {
-    max-width: 100vw;
+    max-width: 100vw !important;
+  }
+
+  .image-thumbnail {
+    height: 15vw;
   }
 }
