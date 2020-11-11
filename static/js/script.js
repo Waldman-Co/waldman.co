@@ -89,9 +89,23 @@ const projectSpyScrolling = () => {
 }
 
 // set project image slide with thumnails
-const setSlide = (cssClass, src) => {
-    const image = document.querySelector(`.${cssClass}`)
-    image.setAttribute('src', src)
+const setSlide = (classes, src, alt) => {
+    const image = document.querySelector(`.${classes.split(' ')[0]}`)
+    const next = document.createElement("img")
+    next.setAttribute('src', src)
+    next.setAttribute('alt', alt)
+    next.className = classes
+
+    image.replaceWith(next)
+}
+
+const activateThumbnail = (projectId, image) => {
+    // unset active thumnail
+    const activeThumbnail = document.querySelector(`.${projectId}.thumbnail-container > .image-thumbnail.active-thumbnail`)
+    activeThumbnail.classList.remove('active-thumbnail')
+    // activate new thumnail
+    const activate = document.querySelector(`.${projectId}.thumbnail-container > .image-thumbnail[src="${image}"]`)
+    activate.classList.add('active-thumbnail')
 }
 
 onLoadPageNavItemHandler()

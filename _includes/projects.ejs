@@ -8,18 +8,19 @@
     <div class="project-list">
         <% projectsList.forEach((project, index) => { %>
           <div id="<%= project.id %>" class="project-card">
-            <img class='<%= project.id %>-project-image' src="<%= project.images[0] %>" alt="<%= project.title %>">
+            <img class='<%= project.id %>-project-image fade' src="<%= project.images[0] %>" alt="<%= project.title %>">
             <div class='project-description-container'>
-              <h2 class="project-title"><%= project.title %> <a href='#' class='project-link'>website.com</a></h2>
+              <h2 class="project-title"><%= project.title %> <a href='<%= project.link %>' class='project-link' target='_blank'><%= project.displayLink %></a></h2>
               <p class='project-description'><%= project.description %></p>
             </div>
           </div>
-          <div class='thumbnail-container'>
+          <div class='<%= project.id %> thumbnail-container'>
             <%project.images.forEach((image, i) => {%>
+              <% const className = i === 0 ? 'image-thumbnail active-thumbnail' : 'image-thumbnail' %>
               <img 
-                class='image-thumbnail' 
+                class="<%= className %>" 
                 src="<%= image %>" alt="<%= project.title %>" 
-                onclick='setSlide("<%= project.id %>-project-image", "<%= image %>")'
+                onclick='setSlide("<%= project.id %>-project-image fade", "<%= image %>", "<%= project.title %>"); activateThumbnail("<%= project.id %>", "<%= image %>")'
                 >
             <%})%>
           </div>

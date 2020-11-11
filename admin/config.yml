@@ -75,6 +75,8 @@ collections:
             fields: 
               - { name: "id", widget: "string"}
               - { name: "title", widget: "string"}
+              - { name: "link", widget: "string"}
+              - { label: "display link as", name: "displayLink", widget: "string"}
               - { name: "description", widget: "string"}
               - { name: "images", widget: "list",
                   field: { name: "image", widget: "image" } 
