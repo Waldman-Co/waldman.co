@@ -72,7 +72,7 @@ const spyScrolling = () => {
 }
 
 const projectSpyScrolling = () => {
-    const projects = document.querySelectorAll('.project-anchor')
+    const projects = document.querySelectorAll('.project-card')
     window.onscroll = () => {
         const scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
         for (let index in projects) {
@@ -86,6 +86,12 @@ const projectSpyScrolling = () => {
             }
         }
     }
+}
+
+// set project image slide with thumnails
+const setSlide = (cssClass, src) => {
+    const image = document.querySelector(`.${cssClass}`)
+    image.setAttribute('src', src)
 }
 
 onLoadPageNavItemHandler()

@@ -7,18 +7,22 @@
     <%- include("partials/_title.ejs") -%>
     <div class="project-list">
         <% projectsList.forEach((project, index) => { %>
-          <div id="<%= project.id %>" class="project-card project-anchor-<%= project.id %> project-anchor">
-            <img src="<%= project.images[0] %>" alt="<%= project.title %>">
-            <div class='project-description'>
-              <h2 class="project-card-title"><%= project.title %></h2>
-              <p><%= project.description %></p>
+          <div id="<%= project.id %>" class="project-card">
+            <img class='<%= project.id %>-project-image' src="<%= project.images[0] %>" alt="<%= project.title %>">
+            <div class='project-description-container'>
+              <h2 class="project-title"><%= project.title %> <a href='#' class='project-link'>website.com</a></h2>
+              <p class='project-description'><%= project.description %></p>
             </div>
           </div>
-          <!-- <div class='images-container'>
-            <%project.images.forEach(image => {%>
-              <img src="<%= image %>" alt="<%= project.title %>" height='80px' width:'100%'>
+          <div class='thumbnail-container'>
+            <%project.images.forEach((image, i) => {%>
+              <img 
+                class='image-thumbnail' 
+                src="<%= image %>" alt="<%= project.title %>" 
+                onclick='setSlide("<%= project.id %>-project-image", "<%= image %>")'
+                >
             <%})%>
-          </div> -->
+          </div>
         <% }) %>
     </div>
     <%= content %>
