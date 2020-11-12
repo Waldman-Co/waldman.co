@@ -8,7 +8,9 @@
     <div class="project-list">
         <% projectsList.forEach((project, index) => { %>
           <div id="<%= project.id %>" class="project-card">
-            <img class='<%= project.id %>-project-image fade' src="<%= project.images[0] %>" alt="<%= project.title %>">
+            <div class='project-image-container'>
+              <img class='<%= project.id %>-project-image fade' src="<%= project.images[0] %>" alt="<%= project.title %>">
+            </div>
             <div class='<%= project.id %> thumbnail-container'>
               <%project.images.forEach((image, i) => {%>
                 <% const className = i === 0 ? 'image-thumbnail active-thumbnail' : 'image-thumbnail' %>

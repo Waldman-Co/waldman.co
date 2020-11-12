@@ -77,7 +77,7 @@ const projectSpyScrolling = () => {
         const scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
         for (let index in projects) {
             const project = projects[index]
-
+            // update to more precise: if the middle of the project is anywhere in the middle 1/3rd of the viewport height -> offsetTop + offsetHeight / 2 >= window.innerHeight / 3 && offsetTop + offsetHeight / 2 <= window.innerHeight / 3 * 2
             if(projects.hasOwnProperty(index) && project.offsetTop <= scrollPos + 305 && project.offsetTop + project.offsetHeight - 500 >= scrollPos) {
                 project.classList.add('active-card')
             }
