@@ -11,6 +11,7 @@
         <% let i = 1 %> 
         <% for (const post of collections.post.reverse()) { %>
             <article id="<%= i++ %>" class="excerpt">
+                <!-- can't add post.author -->
                 <span class="date"><%= formatDate(post.date) %></span>
                 <%- extractExcerpt(post) || post.templateContent %>
             </article>
