@@ -101,7 +101,8 @@ const setSlide = (projectId, nextSrc) => {
     current.classList.add('animate-out')
 
     // animate in next image
-    next.removeAttribute('style');
+    if (next.style.removeAttribute) { next.style.removeAttribute('display') } // ie <= 9
+    else { next.style.removeProperty('display') }    
     next.classList.add('animate-in')
 
     document.addEventListener('animationend', (e) => {
