@@ -89,14 +89,22 @@ const projectSpyScrolling = () => {
 }
 
 // set project image slide with thumnails
-const setSlide = (classes, src, alt) => {
-    const image = document.querySelector(`.${classes.split(' ')[0]}`)
-    const next = document.createElement("img")
-    next.setAttribute('src', src)
-    next.setAttribute('alt', alt)
-    next.className = classes
+const setSlide = (projectId, nextSrc) => {
+    const current = document.querySelector(`.${projectId}-project-image.animate-in`)
+    const next = document.querySelector(`.${projectId}-project-image[src="${nextSrc}"]`)
 
-    image.replaceWith(next)
+    current.classList.remove('animate-in')
+    current.classList.add('animate-out')
+
+    next.classList.remove('display-none')
+    next.classList.add('animate-in')
+
+    setTimeout(() => {
+        if (!current.classList.contains('animate-in')) {
+            current.classList.add('display-none')
+        }
+        current.classList.remove('animate-out')
+    }, 1400)
 }
 
 const activateThumbnail = (projectId, image) => {

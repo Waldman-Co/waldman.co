@@ -35,20 +35,39 @@ div.project-image-container {
 
 .project-card img[class*="-project-image"] {
   height: 100%;
-
   width: unset;
-  /* width: 100%; */
-  /* object-fit: cover; */
 
   /* scrollspy inactive state */
   filter: grayscale(1);
   transition: 1.5s;
 
-  /* display: none; */
   position: absolute;
-
 }
 
+@keyframes animateIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.project-card img[class*="-project-image"].animate-in {
+  animation-name: animateIn;
+  animation-duration: 1.5s;
+}
+
+@keyframes animateOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.project-card img[class*="-project-image"].animate-out {
+  animation-name: animateOut;
+  /* duration needs to match timeout for script.js -> setSlide() */
+  animation-duration: 1.5s; 
+}
+
+.display-none {
+  display: none;
+}
 
 .project-card.active-card [class*="-project-image"] {
   /* scollspy active state */
@@ -117,23 +136,6 @@ div.project-image-container {
 .active-thumbnail {
   filter: grayscale(0);
   outline: 2px solid white;
-}
-
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  -webkit-animation-duration: 2s;
-  animation-name: fadeIn;
-  animation-duration: 2s;
-}
-
-@-webkit-keyframes fadeIn {
-  from {opacity: 0.5}
-  to {opacity: 1}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0.5}
-  to {opacity: 1}
 }
 
 /* MOBILE IN PORTRAIT */
