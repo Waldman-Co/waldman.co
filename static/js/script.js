@@ -92,19 +92,29 @@ const projectSpyScrolling = () => {
 const setSlide = (projectId, nextSrc) => {
     const current = document.querySelector(`.${projectId}-project-image.animate-in`)
     const next = document.querySelector(`.${projectId}-project-image[src="${nextSrc}"]`)
+    
+    // if already displaying, bail out
+    if (current.getAttribute('src') === nextSrc) return
 
+    // animate out current image
     current.classList.remove('animate-in')
     current.classList.add('animate-out')
 
+    // animate in next image
     next.classList.remove('display-none')
     next.classList.add('animate-in')
 
-    setTimeout(() => {
-        if (!current.classList.contains('animate-in')) {
-            current.classList.add('display-none')
+    document.addEventListener('animationend', (e) => {
+        // when animate out done
+        if (e.animationName === 'animateOut') {
+            // if it's not also trying to animate in, display none
+            if (!e.target.classList.contains('animate-in')) {
+                e.target.classList.add('display-none')
+            }
+            // either way, remove animate-out
+            e.target.classList.remove('animate-out')
         }
-        current.classList.remove('animate-out')
-    }, 1400)
+    })
 }
 
 const activateThumbnail = (projectId, image) => {

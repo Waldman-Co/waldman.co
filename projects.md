@@ -23,7 +23,8 @@ projectsList:
       Online catalogue built with S3, PHP, and React. Optimized for google
       search and website performance score.
     images:
-      - https://www.imagescanada.ca/wp-content/uploads/2019/03/Spectacular-Photos-of-Niagara-Falls-Casinos.jpg
+      - /static/images/projects/strong-1.png
+      - /static/images/projects/strong-2.png
   - id: other
     title: Other Project
     link: https://website.com

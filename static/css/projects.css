@@ -61,7 +61,6 @@ div.project-image-container {
 
 .project-card img[class*="-project-image"].animate-out {
   animation-name: animateOut;
-  /* duration needs to match timeout for script.js -> setSlide() */
   animation-duration: 1.5s; 
 }
 
