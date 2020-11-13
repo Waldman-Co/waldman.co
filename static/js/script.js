@@ -101,7 +101,7 @@ const setSlide = (projectId, nextSrc) => {
     current.classList.add('animate-out')
 
     // animate in next image
-    next.classList.remove('display-none')
+    next.removeAttribute('style');
     next.classList.add('animate-in')
 
     document.addEventListener('animationend', (e) => {
@@ -109,7 +109,7 @@ const setSlide = (projectId, nextSrc) => {
         if (e.animationName === 'animateOut') {
             // if it's not also trying to animate in, display none
             if (!e.target.classList.contains('animate-in')) {
-                e.target.classList.add('display-none')
+                e.target.style.display = 'none';
             }
             // either way, remove animate-out
             e.target.classList.remove('animate-out')

@@ -10,8 +10,11 @@
           <div id="<%= project.id %>" class="project-card">
             <div class='project-image-container'>
               <% project.images.forEach((image, i) => {%>
-                <% const displayClass = i === 0 ? 'animate-in' : 'display-none'%>
-                <img class='<%= project.id %>-project-image <%= displayClass%>' src="<%= image %>" alt="<%= project.title %>">
+                <%if (i === 0) {%>
+                  <img class="<%= project.id %>-project-image animate-in" src="<%= image %>" alt="<%= project.title %>">
+                <% } else { %>
+                  <img class="<%= project.id %>-project-image" src="<%= image %>" alt="<%= project.title %>" style="display: none;">
+                <%}%>
               <%})%>
             </div>
             <div class='<%= project.id %> thumbnail-container'>
