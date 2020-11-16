@@ -3,7 +3,21 @@
     <%- include("/partials/_head.ejs") -%>
 <body>
     <%- include("partials/_nav.ejs") -%>
+    <div class="fixed-background"></div>
     <%- include("partials/_title.ejs") -%>
+    <div class='team-container'>
+    <% team.forEach(member => { %>
+        <div class='card'>
+            <img class='portrait' src='<%= member.image%>' height='200' width='200'>
+            <div class='description'>
+                <h1><%= member.name %></h1>
+                <p class='role'><%= member.role %></p>
+                <p class='about'><%= member.about %></p>
+                <p class='fun-fact'><%= member.funFact %></p>
+            </div>
+        </div>
+    <% })%>
+    </div>
     <%= content %>
     <%- include("/partials/_footer.ejs")-%> 
 </body>

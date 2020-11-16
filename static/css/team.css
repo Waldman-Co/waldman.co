@@ -1,0 +1,42 @@
+.team-container {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(500px, 1fr) );
+  width: 100vw;
+  font-size: 12px;
+  color: white;
+}
+
+.card {
+  display: flex;
+}
+
+img.portrait {
+  object-fit: contain;
+}
+
+div.description {
+  margin: 0 2vw;
+  min-width: 300px;
+}
+
+.description h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.description p {
+  margin: 0;
+  font-size: 1.25em;
+}
+
+.description p:first-of-type {
+  margin-bottom: 10px;
+}
+
+.description p:last-of-type {
+  margin-top: 10px;
+}
+
+.description .role {
+  font-style: italic;
+}
