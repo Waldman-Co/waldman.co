@@ -10,7 +10,7 @@
   color: white;
   margin: 2rem 0;
 
-  height: calc(100vh - 50px);
+  height: calc(90vh - 50px);
 
   display: flex;
   flex-direction: column;
@@ -24,8 +24,8 @@
 
 div.project-image-container {
   position: relative;
-  
-  height: calc(100vh - 50px - 6vw - 1.75rem);
+
+  height: 100%;
   width: 100vw;
 
   display: flex;
@@ -35,13 +35,15 @@ div.project-image-container {
 
 .project-card img[class*="-project-image"] {
   height: 100%;
-  width: unset;
+  width: 100%;
 
   /* scrollspy inactive state */
   filter: grayscale(1);
   transition: 1.5s;
 
   position: absolute;
+
+  object-fit: contain;
 }
 
 .project-card.active-card [class*="-project-image"] {
@@ -74,7 +76,6 @@ img[class*="-project-image"].animate-out {
   background-color: rgb(20,33,48, 0.7);
 
   bottom: calc(6vw + 2rem);
-  /* how can I make this width match the image width??? */
   width: 100%;
 
   padding: 0.5rem 1rem;
@@ -133,10 +134,15 @@ img[class*="-project-image"].animate-out {
   outline: 2px solid white;
 }
 
-/* MOBILE IN PORTRAIT */
-@media (max-width: 500px) {
+/* TABLET/MOBILE IN PORTRAIT */
+@media (orientation: portrait) {
+  .project-card {
+    height: max-content;
+  }
+
   .project-image-container {
     width: 100vw !important;
+    height: calc(90vw - 15vw - 50px) !important;
   }
 
   .project-description-container {
@@ -157,25 +163,17 @@ img[class*="-project-image"].animate-out {
   }
 }
 
-/* MOBILE IN LANDSCAPE */
-@media (orientation: landscape) and (max-width: 825px) {
+/* TABLET/MOBILE IN LANDSCAPE */
+@media (orientation: landscape) and (max-height: 600px) {
   .project-card {
     height: max-content;
   }
 
   .project-image-container {
     width: 100vw !important;
-    height: calc(100vh - 50px) !important;
-    overflow: unset;
+    height: calc(90vh - 50px) !important;
   }
 
-  .project-card img[class*="-project-image"] {
-    width: unset;
-    height: 100%;
-    object-fit: unset;
-  }
-
-  
   .project-description-container {
     position: relative;
     bottom: 0;
