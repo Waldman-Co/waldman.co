@@ -7,7 +7,11 @@
     <div class="fixed-background"></div>
     <%- include("partials/_title.ejs") -%>
     <article class="blog">
-        <h2 class="post-date"><%= author %> | <%= formatDate(date) %></h2>
+        <h2 class='post-title'><%= title %></h2>
+        <div class='post-header'>
+            <p><%= author %></p>
+            <p><%= formatDate(date) %></p>
+        </div>
         <%- content %>
     </article>
     <div class="links">
