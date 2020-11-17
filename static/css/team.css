@@ -1,22 +1,33 @@
-.team-container {
+.team-grid {
+  width: 100%;
+  margin-top: 5vh;
+
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(500px, 1fr) );
-  width: 100vw;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  row-gap: 2vmax;
+
   font-size: 12px;
   color: white;
 }
 
 .card {
   display: flex;
+  max-width: 600px;
+  padding: 0 5%;
 }
 
 img.portrait {
+  flex: 1;
+  min-width: 80px;
+  max-width: 200px;
   object-fit: contain;
+  object-position: top;
 }
 
 div.description {
-  margin: 0 2vw;
-  min-width: 300px;
+  flex: 3;
+  margin-left: 5%;
 }
 
 .description h1 {
@@ -26,17 +37,22 @@ div.description {
 
 .description p {
   margin: 0;
+  margin-bottom: 10px;
   font-size: 1.25em;
 }
 
-.description p:first-of-type {
-  margin-bottom: 10px;
-}
-
 .description p:last-of-type {
-  margin-top: 10px;
+  margin: 0;
 }
 
 .description .role {
   font-style: italic;
+}
+
+@media (orientation: portrait) {
+  .team-grid {
+    grid-template-columns: auto;
+    margin-top: 0;
+    font-size: 10px;
+  }
 }
