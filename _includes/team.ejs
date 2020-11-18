@@ -6,7 +6,7 @@
     <div class="fixed-background"></div>
     <%- include("partials/_title.ejs") -%>
         <div class='team-grid'>
-            <% team.forEach(member => { %>
+            <% teamList.forEach(member => { %>
                 <div class='card'>
                     <img class='portrait' src='<%= member.image%>' width='200'>
                     <div class='description'>

@@ -81,3 +81,16 @@ collections:
               - { name: "images", widget: "list",
                   field: { name: "image", widget: "image" } 
                 }
+      - label: "Team"
+        name: "team"
+        file: "/team.md"
+        fields: 
+        - name: "teamList"
+          widget: "list"
+          fields: 
+            - { name: "id", widget: "string" }
+            - { label: "full name", name: "name", widget: "string" }
+            - { name: "image", widget: "image" }
+            - { name: "role", widget: "string" }
+            - { name: "about", widget: "string" }
+            - { label: "fun fact", name: "funFact", widget: "string" }
