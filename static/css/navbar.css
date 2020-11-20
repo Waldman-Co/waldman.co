@@ -16,7 +16,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  height: 50px;
+  height: 100%;
 }
 
 .navbar .navbar-list .navbar-item {
@@ -29,7 +29,7 @@
   display: inline-block;
   padding: 4px 7px;
   position: relative;
-  margin: 0px 20px 3px;
+  margin: 0px 1vw 3px;
   height: 100%;
   transition: 0.2s;
   cursor:pointer;
@@ -48,12 +48,16 @@
 
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
+  .navbar {
+    height: 40px;
+  }
+
   .navbar .navbar-list{
         justify-content: space-evenly;
   }
   .navbar .navbar-list .navbar-item a {
-    font-size: 18px;
+    font-size: 4.5vw;
     padding: 10px 10px 9px;
     margin: 0px 2px;
   }
