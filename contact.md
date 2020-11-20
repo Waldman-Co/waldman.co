@@ -12,4 +12,5 @@ country: Canada
 postal: H2V 1Z9
 subText: An Eric Waldman company
 link: https://ericwaldman.ca
+tags: ['page']
 ---

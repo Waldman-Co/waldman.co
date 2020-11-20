@@ -1,27 +1,28 @@
 ---
-firstHero: static/images/backgrounds/astronaut-over-earth-crop.jpg
+tags: ['page']
+firstHero: static/images/astronaut-over-earth-crop.jpg
 firstHeroSet:
-  - - static/images/backgrounds/astronaut-over-earth.jpg
+  - - static/images/astronaut-over-earth.jpg
     - 1600w
-  - - static/images/backgrounds/astronaut-over-earth.jpg
+  - - static/images/astronaut-over-earth.jpg
     - 1000w
-  - - static/images/backgrounds/astronaut-over-earth-crop.jpg
+  - - static/images/astronaut-over-earth-crop.jpg
     - 999w
-  - - static/images/backgrounds/astronaut-over-earth-crop.jpg
+  - - static/images/astronaut-over-earth-crop.jpg
     - 500w
 clientsSubtitle: ""
 clientsCollection:
-  - - /static/images/clients/parlamericas.png
+  - - /static/images/client-parlamericas.png
     - http://parlamericas.org
-  - - /static/images/clients/learningbird.png
+  - - /static/images/client-learningbird.png
     - http://learningbird.com
-  - - /static/images/clients/victoria.png
+  - - /static/images/client-victoria.png
     - http://locationvictoria.ca
     - rounded
-  - - /static/images/clients/colbymonet.png
+  - - /static/images/client-colbymonet.png
     - http://colby-monet.com
     - rounded
-  - - /static/images/clients/mindbliss.png
+  - - /static/images/client-mindbliss.png
     - http://mindbliss.com
 layout: index.ejs
 firstBox:
@@ -52,15 +53,15 @@ servicesCollection:
   - - /static/images/icons/open-source.png
     - Open-Source Consulting
 clientsTitle: featured clients
-secondHero: static/images/backgrounds/spaceshuttle-short.jpg
+secondHero: static/images/spaceshuttle-short.jpg
 secondHeroSet:
-  - - static/images/backgrounds/spaceshuttle-short.jpg
+  - - static/images/spaceshuttle-short.jpg
     - 1200w
-  - - static/images/backgrounds/spaceshuttle-short.jpg
+  - - static/images/spaceshuttle-short.jpg
     - 921w
-  - - static/images/backgrounds/spaceshuttle-short.jpg
+  - - static/images/spaceshuttle-short.jpg
     - 920w
-  - - static/images/backgrounds/spaceshuttle-short.jpg
+  - - static/images/spaceshuttle-short.jpg
     - 500w
 secondBox: <h2 class="section-header">Important ideas deserve perfect
   execution</h2> <p class="section-text"> Where does perfection come from? At

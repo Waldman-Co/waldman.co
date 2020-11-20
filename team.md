@@ -1,5 +1,6 @@
 --- 
 layout: team.ejs
+tags: ['page']
 teamList:
   - id: eric
     image: https://media-exp1.licdn.com/dms/image/C4D03AQGjE75HZ-jv_A/profile-displayphoto-shrink_800_800/0?e=1611187200&v=beta&t=VLHNtRWciOx9VqTvoJ_ZJsWM-FgVXKLj-2HQF5ncWxU
