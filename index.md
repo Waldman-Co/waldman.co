@@ -1,5 +1,60 @@
 ---
 tags: ['page']
+
+images:
+  static/images/astronaut-over-earth-crop.jpg: 
+    title: Astronaut over earth
+    caption: First hero image
+  static/images/spaceshuttle-short.jpg:
+    title: Space shuttle
+    caption: Second hero image
+  static/images/client-parlamericas.png:
+    title: parlamericas.org
+    caption:  Parlamerics client logo
+  static/images/client-learningbird.png:
+    title: learningbird.com
+    caption: Learningbird client logo
+  static/images/client-victoria.png:
+    title: locationvictoria.ca
+    caption: Locationvictoria client logo
+  static/images/client-colbymonet.png:
+    title: colby-monet.com
+    caption: Colby-monet client logo
+  static/images/client-mindbliss.png:
+    title: mindbliss.com
+    caption: Mindbliss client logo
+  static/images/icons/publish.png:
+    title: Websites
+    caption: Websites icon
+  static/images/icons/world-network.png:
+    title: Web Portals
+    caption: Web Portals icon
+  static/images/icons/cms.png:
+    title: Content Management Systems
+    caption: Content Management Systems icon
+  static/images/icons/touch.png:
+    title: Interactive Design
+    caption: Interactive Design icon
+  static/images/icons/shop.png:
+    title: E-Commerce
+    caption: E-Commerce icon
+  static/images/icons/website.png:
+    title: Digital Publishing
+    caption: Digital Publishing icon
+  static/images/icons/smartphone.png:
+    title: IOS & Android Applications
+    caption: IOS & Android Applications icon
+  static/images/icons/search.png:
+    title: Search Engine Optimization
+    caption: Search Engine Optimization icon
+  static/images/icons/ribbon.png:
+    title: Online Marketing
+    caption: Online Marketing icon
+  static/images/icons/open-source.png:
+    title: Open-Source Consulting
+    caption: Open-Source Consulting icon
+
+
 firstHero: static/images/astronaut-over-earth-crop.jpg
 firstHeroSet:
   - - static/images/astronaut-over-earth.jpg

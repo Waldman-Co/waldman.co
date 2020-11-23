@@ -1,6 +1,24 @@
 ---
 layout: projects.ejs
 tags: ['page']
+images:
+  static/images/oclare-1.png:
+    title: Oclare homepage
+    caption: Oclare project image 1
+  static/images/oclare-2.png:
+    title: Oclare teacher dashboard 
+    caption: Oclare project image 2
+  static/images/oclare-3.png:
+    title: Oclare studant view labratory
+    caption: Oclare project image 3
+  static/images/strong-1.png:
+    title: Strongproject homepage 
+    caption: Strongproject project image 1
+  static/images/strong-2.png:
+    title: Strongproject product collection page
+    caption: Strongproject project image 2
+
+
 projectsList:
   - id: oclare
     title: OCLaRE

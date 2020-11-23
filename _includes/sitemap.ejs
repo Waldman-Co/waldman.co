@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- <?xml-stylesheet type="text/xml" href="/css/sitemap-template.xsl"?> -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" >
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" >
     <% for (let page of collections.page) { %>
         <url>
             <loc>https://waldman.co<%= page.url %></loc>
             <priority>1</priority>
-            <% if(page.url.length === 1) { %>
-                <image>
-                    <loc>https://waldman.co/<%= page.data.firstHero %></loc>
-                </image>
+            <% if(page.data.images) { %>
+                <% for (let image in page.data.images) { %>
+                    <image:image>
+                        <image:loc>https://waldman.co/<%= image %></image:loc>
+                        <image:title><%= page.data.images[image].title %></image:title>
+                        <image:caption><%= page.data.images[image].caption %></image:caption>
+                    </image:image>
+                <% } %>
             <% } %>
         </url>
     <% } %>
