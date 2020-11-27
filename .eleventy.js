@@ -1,5 +1,6 @@
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('static')
+    eleventyConfig.addPassthroughCopy('robot.txt')
     eleventyConfig.addPassthroughCopy('admin')
     const ejs = require('ejs')
     eleventyConfig.setLibrary('ejs',ejs)

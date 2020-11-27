@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://waldman.com/sitemap.xml
