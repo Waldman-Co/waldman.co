@@ -45,10 +45,11 @@ projectsList:
       - /static/images/strong-1.png
       - /static/images/strong-2.png
   - id: other
-    title: Other Project
-    link: https://website.com
-    displayLink: website.com
-    description: Another project, built whenever, using whatever.
+    title: Worldchat    
+    link: https://worldchat.live
+    displayLink: worldchat.live
+    description: A pedagogical tool for second language professors around the world to design authentic speaking activities for their students.
     images:
-      - https://www.imagescanada.ca/wp-content/uploads/2019/03/Spectacular-Photos-of-Niagara-Falls-Casinos.jpg
+      - /static/images/worldchat-1.png
+      - /static/images/worldchat-3.png
 ---
