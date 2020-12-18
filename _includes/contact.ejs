@@ -6,39 +6,49 @@
     <div class="fixed-background"></div>
     <%- include("partials/_title.ejs") -%>
     <section class="section contact-section">
-        <h2 class="contact-message"><%= getInTouchMessage %></h2>
-        <div class="contact-btn-set">
-            <a class="button contact-button" href="mailto:<%= email %>">
-                <img class="button-content icon" src="/static/images/icons/mail.png" />
-                <span class="button-content"><%= email %></span>
-            </a>
-            <a class="button contact-button" href="tel:<%= phone %>">
-                <img class="button-content icon" style="height:35px;" src="/static/images/icons/phone.png"/>
-            <span class="button-content"><%= phoneDisplay %></span>
-            </a>
-        </div>
-        <div class="address-info">
-            <p><%= address %></p>
-            <p><%= suite %></p>
-            <p><%= city %>, <%= province %>, <%= country %></p>
-            <p><%= postal %></p>
-        </div>
-        <div>
-            <form name="contact" method="POST" netlify>
-                <p>
-                  <label>Your Name: <input type="text" name="name" /></label>   
-                </p>
-                <p>
-                  <label>Your Email: <input type="email" name="email" /></label>
-                </p>
-                <p>
-                  <label>Message: <textarea name="message"></textarea></label>
-                </p>
-                <p>
-                  <button type="submit">Send</button>
-                </p>
-            </form>
-        </div>
+      <h2 class="contact-message"><%= getInTouchMessage %></h2>
+
+        <form class='contact-form' name="contact" method="POST" netlify>
+          <div class='form-names'>
+            <div>
+              <label>First Name</label>
+              <input class='small' type="text" name="first-name" placeholder="First Name"/>   
+            </div>    
+            <div>
+              <label>Last Name</label>
+              <input class='small' type="text" name="last-name" placeholder="Last Name"/>   
+            </div>
+          </div>
+            <div>
+              <label>Email</label>
+              <input class='large' type="email" name="email" placeholder="Your Email"/>
+            </div>
+            <div>
+              <label>Phone Number</label>
+              <input class='large' type="phone number" name="phone-number" placeholder="Your phone number"/>
+            </div>
+            <div>
+              <label>Message</label>
+              <textarea name="message" placeholder="Send us a note..."></textarea>
+            </div>
+            <button class='button' type="submit">Send</button>
+        </form>
+      <div class="contact-btn-set">
+          <a class="button contact-button" href="mailto:<%= email %>">
+              <img class="button-content icon" src="/static/images/icons/mail.png" />
+              <span class="button-content"><%= email %></span>
+          </a>
+          <a class="button contact-button" href="tel:<%= phone %>">
+              <img class="button-content icon" style="height:35px;" src="/static/images/icons/phone.png"/>
+          <span class="button-content"><%= phoneDisplay %></span>
+          </a>
+      </div>
+      <div class="address-info">
+          <p><%= address %></p>
+          <p><%= suite %></p>
+          <p><%= city %>, <%= province %>, <%= country %></p>
+          <p><%= postal %></p>
+      </div>
     </section>
     <%= content %>
     <%- include("/partials/_footer.ejs") %> 
