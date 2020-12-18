@@ -1,4 +1,4 @@
---- 
+---
 layout: team.ejs
 tags: ['page']
 teamList:
@@ -18,8 +18,8 @@ teamList:
     image: https://media-exp1.licdn.com/dms/image/C5603AQHv25WjUQ66sw/profile-displayphoto-shrink_800_800/0?e=1611187200&v=beta&t=LiVypCxhoA-rZ5rZFwluL0tjYvv5F5zH32PY3hMn1do
     name: Jay Burbyga
     role: Full Stack Developer
-    about: I graduated from Lighthouse Labs and have been working for Eric Waldman for about a year. I'm an expert bug-squasher ;)
-    funFact: I love snowboarding!
+    about: I graduated from Lighthouse Labs and have been working for Eric Waldman for about a year. Since day one I really enjoyed solving a variety of challenges and learning new languages/frameworks and interesting concepts of web development.
+    funFact: I love snowboarding, playing the drums and crazy about raw tomatoes!
   - id: ariane
     image: https://media-exp1.licdn.com/dms/image/C4D03AQEpFXDB-ShytQ/profile-displayphoto-shrink_400_400/0?e=1611187200&v=beta&t=iUPxn1NMfm6FaoMvYZ6NHXAppyf8eov1F_XlTc1rsbg
     name: Ariane Fairlie
